@@ -1,0 +1,273 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+  background-color: black;
+  color: white;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul li {
+  list-style: none;
+}
+
+.main {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-text h1 {
+  color: #ffea00;
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  font-size: 2.5rem;
+  text-shadow: 3px 4px #558ABB;
+}
+
+.main-text a {
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  background-color: #de767b;
+  border-radius: 20px;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: black -1px 3px;
+  border: #fff 5px;
+  font-size: 1.8rem;
+  padding: 1%;
+  transition: 0.5s;
+}
+
+.main-text a:hover {
+  background-color: #558ABB;
+}
+
+.email-form form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#email {
+  outline: none;
+  border-color: white;
+  padding: 5%;
+  border-radius: 20px;
+  background-color: black;
+  color: #fff;
+  margin-right: 10%;
+  z-index: 1;
+}
+
+#submit {
+  outline: none;
+  background-color: #de767b;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  outline: none;
+  border-radius: 20px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.about-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-text h3 {
+  width: 30%;
+  font-size: 1.5rem;
+}
+
+#people-img {
+  width: 30%;
+  height: 30%;
+}
+
+.main video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  padding: 5%;
+}
+
+.nav.show #line1 {
+  transform: translate(-10px) rotate(45deg) translate(15px);
+}
+
+.nav.show #line2 {
+  opacity: 0;
+}
+
+.nav.show #line3 {
+  transform: translate(-10px) rotate(-45deg) translate(14px);
+}
+
+.nav.show {
+  transform: translateX(0%);
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.toggle {
+  cursor: pointer;
+  height: 100%;
+  z-index: 2;
+}
+
+.toggle-line {
+  height: 2px;
+  width: 35px;
+  margin: 0.5rem 0;
+  background: #fff;
+  transition: transform 0.75s ease, opacity 0.75s ease;
+  z-index: 3;
+}
+
+.nav-links.show {
+  position: absolute;
+  justify-content: space-between;
+  top: 0;
+  transition: 0.5s;
+  background-color: #558ABB;
+}
+
+.nav-links ul {
+  width: 100%;
+}
+
+.nav-links.show ul {
+  margin-top: 5rem;
+}
+
+.micro {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+}
+
+.micro img {
+  padding: 1%;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.micro img:hover {
+  background-color: #de767b;
+}
+
+.nav-links ul li {
+  color: #fff;
+  font-family: "Open Sans";
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1300px) {
+  #people-img {
+    display: none;
+  }
+  .about-text h3 {
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 840px) {
+  .nav-links {
+    position: fixed;
+    top: -100%;
+    transition: 0.5s;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    left: 0;
+  }
+  .email-form form {
+    flex-direction: column;
+  }
+  #email {
+    margin: 0;
+  }
+  #submit {
+    margin-top: 7%;
+  }
+  .main-text a {
+    padding: 3%;
+  }
+  .nav-links a {
+    color: black;
+  }
+  .nav-links ul li {
+    margin-bottom: 3%;
+    font-size: 40px;
+    text-shadow: black -3px 5px;
+  }
+  .main-text button {
+    width: 30vw;
+    height: 10vw;
+  }
+}
+@media screen and (min-width: 840px) {
+  .toggle {
+    display: none;
+  }
+  .nav-links ul {
+    display: flex;
+  }
+  .nav-links ul li {
+    padding-left: 30px;
+  }
+  .main-text h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
