@@ -1,6 +1,7 @@
 import Index from "../views/Index.js"
 import About from "../views/About.js";
 import Try from "../views/Try.js";
+import Error from "../views/Error.js";
 
 const navigateTo = url =>  {
     history.pushState(null, null, url);
@@ -47,9 +48,11 @@ const router = async() => {
 
     if (match.route.path === "/try.html") {
         const micro = document.querySelector('.micro img');
+        console.log("Micro")
         micro.addEventListener('click', ()=>{
             console.log("Click")
             async function query(filename) {
+            //const data = fs.readFileSync(filename);
             const data = "123";
             const response = await fetch(
                 "https://api-inference.huggingface.co/models/Yehor/w2v-bert-2.0-uk",
@@ -57,7 +60,7 @@ const router = async() => {
                     headers: { Authorization: "Bearer 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"},
                     options: { wait_for_model: true},
                     method: "POST",
-                    body: data,
+                    body: JSON.stringify(data),
                 }
             );
 
