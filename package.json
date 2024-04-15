@@ -1,0 +1,29 @@
+{
+  "name": "notua",
+  "version": "1.0.0",
+  "description": "Speech to text notes for ukrainian language",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mechark/mechark.weblab.io.git"
+  },
+  "author": "mechark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mechark/mechark.weblab.io/issues"
+  },
+  "homepage": "https://github.com/mechark/mechark.weblab.io#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "requirejs": "^2.3.6"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0"
+  }
+}
